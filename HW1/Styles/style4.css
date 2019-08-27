@@ -1,0 +1,110 @@
+.Rtable {
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 0 3em 0;
+    padding: 0;
+}
+
+.Rtable-cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    border: solid 2px white;
+}
+
+@media screen and (min-device-width: 1080px) {
+    .Rtable-cell-1 {
+        width: 40%;
+        background-color: red;
+    }
+
+    .Rtable-cell-2 {
+        width: 60%;
+        background-color: orange;
+    }
+
+    .Rtable-cell-3 {
+        width: 100%;
+        background-color: green;
+    }
+
+    .Rtable-cell-4 {
+        width: 33.33%;
+        background-color: brown;
+    }
+
+    .Rtable-cell-5 {
+        width: 33.33%;
+        background-color: blue;
+    }
+
+    .Rtable-cell-6 {
+        width: 33.33%;
+        background-color: rgb(109, 0, 109);
+    }
+}
+
+/*iPads*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .Rtable-cell-1 {
+        width: 40%;
+        background-color: orange;
+    }
+
+    .Rtable-cell-2 {
+        width: 60%;
+        background-color: purple;
+    }
+
+    .Rtable-cell-3 {
+        width: 100%;
+        background-color: red;
+    }
+
+    .Rtable-cell-4 {
+        width: 50%;
+        background-color: green;
+    }
+
+    .Rtable-cell-5 {
+        width: 50%;
+        background-color: blue;
+    }
+
+    .Rtable-cell-6 {
+        display: none;
+    }
+}
+
+/*iPhones*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 812px) {
+    .Rtable-cell-1 {
+        display: none;
+    }
+
+    .Rtable-cell-2 {
+        width: 100%;
+        background-color: green;
+    }
+
+    .Rtable-cell-3 {
+        width: 100%;
+        background-color: rgb(55, 19, 126);
+    }
+
+    .Rtable-cell-4 {
+        width: 100%;
+        background-color: red;
+    }
+
+    .Rtable-cell-5 {
+        display: none;
+    }
+
+    .Rtable-cell-6 {
+        display: none;
+    }
+}

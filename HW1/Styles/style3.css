@@ -1,0 +1,50 @@
+body{
+    width: 100%;
+    margin: 0;
+}
+header{
+    position: fixed;
+    left: 5%;
+    width: 90%;
+    height: 15%;
+    border-radius: 15px;
+    border: 2px solid black;
+    
+}
+#sideBar{
+    position: fixed;
+    top: 20%;
+    width: 10%;
+    height: 600px;
+    background: transparent;
+    background-color: lightblue;
+}
+#centerBlock{
+    position: fixed;
+    top:  150px;
+    right: 70px;
+    width: 80%;
+    border: 3px solid black;
+    background-color: lightblue;
+}
+#sideBar > ul{
+    list-style: none;
+    margin: auto;
+    position: fixed;
+    left: -30px;
+}
+footer{
+    position: fixed;
+    margin-left: 5%;
+    margin-right: 5%;
+    bottom: 0;
+    width: 90%;
+    height: 15%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: lightblue;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
