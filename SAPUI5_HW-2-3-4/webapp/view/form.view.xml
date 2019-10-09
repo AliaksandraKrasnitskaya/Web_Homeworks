@@ -1,0 +1,54 @@
+<mvc:View controllerName="sap.hw2.HW2.controller.form" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+ <Shell id="shell">
+        <App id="app">
+
+            <SplitContainer id="SplitContDemo" initialDetail="page" initialMaster="master">
+                <detailPages>
+                    <Page id="page" title="{i18n>titleMainForm}">
+                        <content>
+                            <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="form0">
+                                <sap.ui.layout.form:formContainers>
+                                    <sap.ui.layout.form:FormContainer title="Book Form" id="container0">
+                                        <sap.ui.layout.form:formElements>
+                                            <sap.ui.layout.form:FormElement label="Author" id="element1">
+                                                <sap.ui.layout.form:fields>
+                                                    <Input width="50%" id="inputAuthor"/>
+                                                </sap.ui.layout.form:fields>
+                                            </sap.ui.layout.form:FormElement>
+                                            <sap.ui.layout.form:FormElement label="Title" id="element0">
+                                                <sap.ui.layout.form:fields>
+                                                    <Input width="50%" id="inputTitle"/>
+                                                </sap.ui.layout.form:fields>
+                                            </sap.ui.layout.form:FormElement>
+                                            <sap.ui.layout.form:FormElement label="Pages" id="element2">
+                                                <sap.ui.layout.form:fields>
+                                                    <Input width="50%" id="inputPages"/>
+                                                </sap.ui.layout.form:fields>
+                                            </sap.ui.layout.form:FormElement>
+                                        </sap.ui.layout.form:formElements>
+                                    </sap.ui.layout.form:FormContainer>
+                                </sap.ui.layout.form:formContainers>
+                                <sap.ui.layout.form:layout>
+                                    <sap.ui.layout.form:ResponsiveGridLayout id="layout0"/>
+                                </sap.ui.layout.form:layout></sap.ui.layout.form:Form>
+                            <Button xmlns="sap.m" text="Submit" id="buttonSubmit" press="OnSubmitPress"/>
+                        </content>
+                    </Page>
+                </detailPages>
+                <masterPages>
+                    <Page id="master" title="Pages" class="sapUiStdPage">
+                        <content>
+                            <List>
+                                <items>
+                                    <StandardListItem xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" title="{i18n>titleInputPage}" type="Active" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'input'\}\}\}"/>
+                                    <StandardListItem xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" title="{i18n>titleTable}" type="Active" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'table'\}\}\}"/>
+                            		<StandardListItem xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" title="{i18n>titleODataTable}" type="Active" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'productODATA'\}\}\}"/>
+                                </items>
+                            </List>
+                        </content>
+                    </Page>
+                </masterPages>
+            </SplitContainer>
+        </App>
+    </Shell>
+</mvc:View>

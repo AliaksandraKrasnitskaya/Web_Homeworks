@@ -1,0 +1,42 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.hw2.HW2.controller.table"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>titleTable}">
+			<content>
+			    <Bar id="bar0">
+			        <contentLeft>
+			            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button0" icon="sap-icon://navigation-left-arrow" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'form'\}\}\}"/>
+			        </contentLeft>
+			    </Bar>
+			    <Table noDataText="Drop column list items here and columns in the area above" id="bookTable" items="{books>/}">
+			        <items>
+			            <ColumnListItem type="Active" id="item" press="onItemPressed">
+			            	<Text text="{books>author}"/>
+		                    <Text text="{books>title}"/>
+		                    <Text text="{books>pages}"/>
+			            </ColumnListItem>
+			        </items>
+			        <columns>
+			            <Column id="column0">
+			                <header>
+			                    <Label text="{i18n>headerAuthor}" id="label0"/>
+			                </header>
+			            </Column>
+			            <Column id="column1">
+			                <header>
+			                    <Label text="{i18n>headerTitle}" id="label1"/>
+			                </header>
+			            </Column>
+			            <Column id="column2">
+			                <header>
+			                    <Label text="{i18n>headerPages}" id="label2"/>
+			                </header>
+			            </Column>
+			        </columns>
+		        </Table>
+			</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
