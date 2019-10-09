@@ -1,0 +1,142 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "sap.hw2.HW2",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "sap.hw2.HW2.view.form",
+			"type": "XML",
+			"async": true,
+			"id": "form"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.hw2.HW2.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "sap.hw2.HW2.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "Routeform",
+					"pattern": "Routeform",
+					"target": [
+						"Targetform"
+					]
+				},
+				{
+					"name": "form",
+					"pattern": "form",
+					"target": [
+						"form"
+					]
+				},
+				{
+					"name": "input",
+					"pattern": "input",
+					"target": [
+						"input"
+					]
+				},
+				{
+					"name": "table",
+					"pattern": "table",
+					"target": [
+						"table"
+					]
+				},
+				{
+					"name": "productODATA",
+					"pattern": "productODATA",
+					"target": [
+						"productODATA"
+					]
+				}
+			],
+			"targets": {
+				"Targetform": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "form",
+					"viewName": "form"
+				},
+				"form": {
+					"viewType": "XML",
+					"viewName": "form"
+				},
+				"input": {
+					"viewType": "XML",
+					"viewName": "input"
+				},
+				"table": {
+					"viewType": "XML",
+					"viewName": "table"
+				},
+				"productODATA": {
+					"viewType": "XML",
+					"viewName": "productODATA"
+				}
+			}
+		}
+	}
+}
